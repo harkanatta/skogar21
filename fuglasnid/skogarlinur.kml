@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="skogarlinur" id="skogarlinur">
+	<SimpleField name="FID" type="float"></SimpleField>
+</Schema>
+<Folder><name>skogarlinur</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#skogarlinur">
+		<SimpleData name="FID">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>-19.5717196176004,65.7209626548718 -19.5455267281876,65.6939910910781 -19.5446560843916,65.6849903509897</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#skogarlinur">
+		<SimpleData name="FID">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>-19.5341102581299,65.685775156665 -19.5402415524681,65.6944570694478 -19.5358760708993,65.6957323786702 -19.5463237964516,65.7080440177013 -19.5497082709263,65.7118208950136 -19.5612351042821,65.7224648219847</coordinates></LineString></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>
