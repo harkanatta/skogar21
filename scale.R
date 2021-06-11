@@ -15,6 +15,3 @@ print(paste(gsub(".*[/]([^.]+)[.].*", "\\1", i)))
   image_set_defines(mynd, defines)
   image_write(mynd, path = paste(pathnew,paste(gsub(".*[/]([^.]+)[.].*", "\\1", i),"JPEG",sep = "."),sep = "/"))
 }
-
-
-write(sort(readLines(here("plontulisti.txt"),encoding = 'UTF-8')),file = here("plisti.txt"))
