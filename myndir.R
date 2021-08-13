@@ -52,7 +52,11 @@ dev.off()
 #---
 #Mynd 2
 
-data <- gogn %>% 
+data <- gogn %>% mutate(fjarlaegd = fct_relevel(fjarlaegd,
+                                                "0-25",
+                                                "25-50",
+                                                "50-100",
+                                                "100+")) %>% 
   ddply(.(tegund,fjarlægð=fjarlaegd),summarise,fjöldi=table(tegund)) %>% 
   mutate(fjöldi=as.double(fjöldi))
 
