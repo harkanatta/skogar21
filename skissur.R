@@ -67,6 +67,11 @@ fuglar <- as_tibble(fuglar) %>% arrange(isl_heiti)
 
 myndalisti <- fuglar[fuglar$isl_heiti %in% talning$isl_heiti,]
 
-library(rphylopic)
-person <- name_search(text = "Homo sapiens", options = "namebankID")[[1]]
+lausnin: https://ropensci.org/blog/2018/09/04/birds-taxo-traits/
 
+library(rphylopic)
+get_results <- function(name){
+  
+  id <- rphylopic::name_search(name)
+  rphylopic::name_images(id$canonicalName[1,1])
+}
