@@ -89,3 +89,5 @@ rass <- B[!is.na(B)] %>%
   map(function(x) save_png(x))
 
 myndalisti[myndalisti$latn_heiti %in% B[is.na(B)]]
+
+install.packages("wikitaxa")
