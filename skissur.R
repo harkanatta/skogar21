@@ -71,7 +71,21 @@ lausnin: https://ropensci.org/blog/2018/09/04/birds-taxo-traits/
 
 library(rphylopic)
 get_results <- function(name){
-  
   id <- rphylopic::name_search(name)
   rphylopic::name_images(id$canonicalName[1,1])
 }
+B <- list()
+A <- list()
+for (i in myndalisti$latn_heiti) {
+  A <- try(get_results(i))
+  B[i] <- unlist(A[4]) 
+}
+
+myndalisti$slod <- B
+
+rass <- B[!is.na(B)] %>% 
+  unname() %>%
+  map(function(x) image_data(x, size = 128)[[1]]) %>% 
+  map(function(x) save_png(x))
+
+myndalisti[myndalisti$latn_heiti %in% B[is.na(B)]]
