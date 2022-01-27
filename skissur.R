@@ -91,3 +91,10 @@ rass <- B[!is.na(B)] %>%
 myndalisti[myndalisti$latn_heiti %in% B[is.na(B)]]
 
 install.packages("wikitaxa")
+
+
+
+library(tidyverse)
+library(plyr)
+landings <- read_csv("C:/Users/BioPol VS/Downloads/ICESDataPortalDownload_SAG_36f64919-f4a9-4fba-af7b-055b79b949b2/StockAssessmentGraphs_2022126.csv
+")
